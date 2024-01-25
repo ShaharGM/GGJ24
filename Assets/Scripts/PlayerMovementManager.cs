@@ -10,12 +10,13 @@ public class PlayerMovementManager : MonoBehaviour
     private Rigidbody2D rb;
     private bool isGrounded;
     private float raycastOffset;
-
+    private Animator animator;
     void Start()
     {
         // Get the Rigidbody2D component attached to the player GameObject
         rb = GetComponent<Rigidbody2D>();
         raycastOffset = GetComponent<Collider2D>().bounds.extents.y + 0.01f; // Adding a small offset for reliability
+        animator = GetComponent<Animator>();
     }
 
     void Update()
@@ -25,6 +26,7 @@ public class PlayerMovementManager : MonoBehaviour
 
         // Call the function to handle player movement
         HandleMovement();
+        animator.SetBool("isJumping", !isGrounded);
 
         // Check for jump input
         if (isGrounded && Input.GetButtonDown("Jump"))
@@ -39,7 +41,9 @@ public class PlayerMovementManager : MonoBehaviour
         // Get input from the user
         float horizontalInput = Input.GetAxis("Horizontal");
 
-         // Rotate the player based on the direction they are moving
+        animator.SetBool("isRunning", horizontalInput != 0);
+
+        // Rotate the player based on the direction they are moving
         if (horizontalInput > 0)
         {
             // Moving right, set rotation to 0 (facing right)
@@ -62,6 +66,7 @@ public class PlayerMovementManager : MonoBehaviour
     {
         // Add upward force to make the player jump
         rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+        
     }
 
     Vector2 GetRaycastOrigin()
