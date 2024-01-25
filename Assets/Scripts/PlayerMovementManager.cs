@@ -39,7 +39,7 @@ public class PlayerMovementManager : MonoBehaviour
     {
         
         // Get input from the user
-        float horizontalInput = Input.GetAxis("Horizontal");
+        float horizontalInput = Input.GetAxisRaw("Horizontal");
 
         animator.SetBool("isRunning", horizontalInput != 0);
 

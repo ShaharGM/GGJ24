@@ -1555,7 +1555,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   power: 10
   attackRange: 1
-  circleCastRadius: 0.5
+  circleCastRadius: 3
   enemyLayer:
     serializedVersion: 2
     m_Bits: 0
