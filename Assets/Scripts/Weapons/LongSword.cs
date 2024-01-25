@@ -2,6 +2,7 @@ using UnityEngine;
 
 namespace Weapons
 {
+    [System.Serializable]
     public class LongSword : SwordBase
     {
         public float rotationSpeed = 360f; // Degrees per second
