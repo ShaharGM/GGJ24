@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class CameraMovementManager : MonoBehaviour
+public class CameraMovementScript : MonoBehaviour
 {
     public Transform target;  // Reference to the player's Transform
     public float smoothTime = 0.3f;  // Adjust this for smoothness of camera movement
