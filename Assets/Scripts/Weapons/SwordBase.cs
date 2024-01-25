@@ -1,17 +1,16 @@
 using UnityEngine;
 
-namespace Weapons{
-// Rename this class to SwordBase so it can act as a base class for different types of swords
-[System.Serializable]
+namespace Weapons
+{
+    // Rename this class to SwordBase so it can act as a base class for different types of swords
+    [System.Serializable]
     public class SwordBase : MonoBehaviour
     {
         // Basic sword configurations
         public float power = 10.0f;
-
         public float attackRange = 1.0f;
         public float circleCastRadius = 0.5f;
         public LayerMask enemyLayer;
-
         public bool is_attacking = false;
 
         void Update()
@@ -28,9 +27,12 @@ namespace Weapons{
 
         private void Attack()
         {
+            // Check if the sword has a parent and use its transform, otherwise use the sword's own transform
+            Transform attackOrigin = transform.parent ? transform.parent : transform;
+
             Debug.Log($"Sword attacking with power {power}, length {attackRange}, and width {circleCastRadius}.");
-            Vector2 direction = transform.parent.right; // Assuming the parent's right is the forward direction
-            RaycastHit2D hit = Physics2D.CircleCast(transform.position, circleCastRadius, direction, attackRange, enemyLayer);
+            Vector2 direction = attackOrigin.right; // Assuming the parent's right is the forward direction
+            RaycastHit2D hit = Physics2D.CircleCast(attackOrigin.position, circleCastRadius, direction, attackRange, enemyLayer);
 
             if (hit.collider != null && hit.collider.gameObject.CompareTag("Enemy"))
             {
@@ -57,9 +59,10 @@ namespace Weapons{
         {
             // Draw the circle cast (ray) for debug purposes
             Gizmos.color = Color.yellow;
-            Vector2 direction = transform.parent.right; // Assuming the parent's right is the forward direction
-            Gizmos.DrawLine(transform.position, transform.position + new Vector3(direction.x, direction.y, 0) * attackRange);
-            Gizmos.DrawWireSphere(transform.position + new Vector3(direction.x, direction.y, 0) * attackRange, circleCastRadius);
+            Transform attackOrigin = transform.parent ? transform.parent : transform;
+            Vector2 direction = attackOrigin.right; // Assuming the parent's right is the forward direction
+            Gizmos.DrawLine(attackOrigin.position, attackOrigin.position + new Vector3(direction.x, direction.y, 0) * attackRange);
+            Gizmos.DrawWireSphere(attackOrigin.position + new Vector3(direction.x, direction.y, 0) * attackRange, circleCastRadius);
         }
     }
 }

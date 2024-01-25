@@ -39,6 +39,18 @@ public class PlayerMovementManager : MonoBehaviour
         // Get input from the user
         float horizontalInput = Input.GetAxis("Horizontal");
 
+         // Rotate the player based on the direction they are moving
+        if (horizontalInput > 0)
+        {
+            // Moving right, set rotation to 0 (facing right)
+            transform.eulerAngles = new Vector3(0, 0, 0);
+        }
+        else if (horizontalInput < 0)
+        {
+            // Moving left, set rotation to 180 (facing left)
+            transform.eulerAngles = new Vector3(0, 180, 0);
+        }
+
         // Calculate the movement direction
         Vector2 movement = new Vector2(horizontalInput, 0f);
 
