@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerMovementManager : MonoBehaviour
 {
     public float moveSpeed = 5f;  // Adjust this speed to your liking
 
@@ -20,6 +20,7 @@ public class PlayerMovement : MonoBehaviour
 
     void HandleMovement()
     {
+        
         // Get input from the user
         float horizontalInput = Input.GetAxis("Horizontal");
 
