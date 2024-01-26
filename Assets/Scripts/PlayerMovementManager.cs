@@ -11,12 +11,15 @@ public class PlayerMovementManager : MonoBehaviour
     private bool isGrounded;
     private float raycastOffset;
     private Animator animator;
+    private SpriteRenderer spriteRenderer;
+    private bool secondJump = true;
     void Start()
     {
         // Get the Rigidbody2D component attached to the player GameObject
         rb = GetComponent<Rigidbody2D>();
         raycastOffset = GetComponent<Collider2D>().bounds.extents.y + 0.01f; // Adding a small offset for reliability
         animator = GetComponent<Animator>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     void Update()
@@ -24,14 +27,26 @@ public class PlayerMovementManager : MonoBehaviour
         // Check if the player is grounded
         isGrounded = Physics2D.Raycast(GetRaycastOrigin(), Vector2.down, 0.2f, groundLayer);
 
+        if (isGrounded){
+            animator.SetBool("isDoubleJump", false);
+            secondJump = true;
+        }
         // Call the function to handle player movement
         HandleMovement();
         animator.SetBool("isJumping", !isGrounded);
 
         // Check for jump input
-        if (isGrounded && Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("Jump"))
         {
-            Jump();
+            if (isGrounded){
+                Jump();
+            }
+            else if (secondJump){
+                animator.SetBool("isDoubleJump", true);
+                secondJump = false;
+                Jump();
+            }
+            
         }
     }
 
@@ -47,12 +62,13 @@ public class PlayerMovementManager : MonoBehaviour
         if (horizontalInput > 0)
         {
             // Moving right, set rotation to 0 (facing right)
-            transform.eulerAngles = new Vector3(0, 0, 0);
+            spriteRenderer.flipX = false;
+            
         }
         else if (horizontalInput < 0)
         {
             // Moving left, set rotation to 180 (facing left)
-            transform.eulerAngles = new Vector3(0, 180, 0);
+            spriteRenderer.flipX = true;
         }
 
         // Calculate the movement direction
