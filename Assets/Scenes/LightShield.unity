@@ -238,11 +238,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8582885254570994739, guid: 593c68206a1986e25967656d51d87e83, type: 3}
       propertyPath: m_text
-      value: "With that sword? \n"
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8582885254570994739, guid: 593c68206a1986e25967656d51d87e83, type: 3}
       propertyPath: m_fontSize
-      value: 0.45
+      value: 36
       objectReference: {fileID: 0}
     - target: {fileID: 8582885254570994764, guid: 593c68206a1986e25967656d51d87e83, type: 3}
       propertyPath: m_SizeDelta.x
@@ -696,15 +696,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueText: {fileID: 1586683008}
   animator: {fileID: 1211986821}
-  i: 0
-  dialog:
-  - With that sword?
-  - Your princess is in another castle
-  - Your may go
-  animationState:
-  - LaughingPrincess
-  - LaughingPrincess
-  - PrincessIdle
+  start:
+  - dialogue: Brave Hero
+    animation: PrincessIdle
+  - dialogue: How did you save me?
+    animation: PrincessIdle
+  win:
+  - dialogue: With that sword?
+    animation: PrincessIdle
+  - dialogue: With that sword?
+    animation: PrincessIdle
+  - dialogue: Oh my...
+    animation: PrincessIdle
+  - dialogue: What a strong Knight you are...
+    animation: PrincessIdle
+  - dialogue: Come in and claim your reward
+    animation: PrincessIdle
+  lose:
+  - dialogue: With that sword?
+    animation: LaughingPrincess
+  - dialogue: Oh dear
+    animation: LaughingPrincess
+  - dialogue: Your princess is in another castle
+    animation: LaughingPrincess
+  - dialogue: You may go
+    animation: PrincessIdle
+  swordSizeThreshold: 10
+  sleepLength: 3
 --- !u!1 &405670669
 GameObject:
   m_ObjectHideFlags: 0
