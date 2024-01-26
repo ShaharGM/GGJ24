@@ -6,6 +6,7 @@ public class EventManager : MonoBehaviour
     public static EventManager Instance { get; private set; }
 
     public static UnityEvent onPlayerHit = new UnityEvent();
+    public static UnityEvent onTalk = new UnityEvent();
 
     void Awake()
     {
@@ -31,6 +32,10 @@ public class EventManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.H))
         {
             onPlayerHit.Invoke(); // Trigger the event
+        }
+                if (Input.GetKeyDown(KeyCode.T))
+        {
+            onTalk.Invoke(); // Trigger the event
         }
     }
 }
