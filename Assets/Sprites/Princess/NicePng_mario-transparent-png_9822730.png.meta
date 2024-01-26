@@ -1,0 +1,612 @@
+fileFormatVersion: 2
+guid: ece41e08109d6cbc6b1ee13979590090
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: NicePng_mario-transparent-png_9822730_1
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 278
+        width: 77
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2aa2936c68c19d6f085168724d8c1a1f
+      internalID: -407618744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mario-transparent-png_9822730_2
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 279
+        width: 78
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87082cefa0e81c0c78da8f7d44830e82
+      internalID: -540660915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mario-transparent-png_9822730_4
+      rect:
+        serializedVersion: 2
+        x: 604
+        y: 278
+        width: 76
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 804688aa71b39d212a7fa28aa700c626
+      internalID: -1655914009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mario-transparent-png_9822730_5
+      rect:
+        serializedVersion: 2
+        x: 688
+        y: 279
+        width: 78
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b108d2b8ae317f051bf699fa825c4fda
+      internalID: 474099880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mario-transparent-png_9822730_6
+      rect:
+        serializedVersion: 2
+        x: 774
+        y: 278
+        width: 75
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d5ae3a4b378eb2aab69836c096deedc
+      internalID: -165143960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mario-transparent-png_9822730_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 140
+        width: 78
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f2d14279d4009427b9cd1622f1ccfd9
+      internalID: -1621974079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mario-transparent-png_9822730_8
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 140
+        width: 78
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ce7651edf8144543933edd8bc08656f
+      internalID: 342953987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mario-transparent-png_9822730_9
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 140
+        width: 81
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da054a4a4373241c4a4ce7db8db5c6ff
+      internalID: 1743240705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mario-transparent-png_9822730_10
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 140
+        width: 78
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ad5bc97a3e30e9a68296f2eb97a9df7
+      internalID: 589941343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mario-transparent-png_9822730_11
+      rect:
+        serializedVersion: 2
+        x: 688
+        y: 140
+        width: 79
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d93dcdc52d72564fab9f152a4d776001
+      internalID: 965001669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mario-transparent-png_9822730_12
+      rect:
+        serializedVersion: 2
+        x: 773
+        y: 139
+        width: 77
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27e0cfaa847fa7774ba4dca5eae26597
+      internalID: 1575251448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mario-transparent-png_9822730_13
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 6
+        width: 80
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 860339335e143f395832953ae1a42bb6
+      internalID: 1234937154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mario-transparent-png_9822730_0
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 280
+        width: 74
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3436809dd1610603489b044dc0841bc5
+      internalID: -1913666126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mario-transparent-png_9822730_3
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 280
+        width: 80
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06cbbc2cdebc6be09afc43c1376ff353
+      internalID: 1078220019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mario-transparent-png_9822730_14
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 277
+        width: 77
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0772801cddaadf8cc8df2d2a2b1b9cb5
+      internalID: -1883322893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mario-transparent-png_9822730_15
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 280
+        width: 80
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1e2a7bdcecd4fef3a669fbcf0a1badd
+      internalID: -1392090808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mario-transparent-png_9822730_16
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 141
+        width: 80
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 865cba7ddc070ef8ca1de2f8429d0da0
+      internalID: -424944211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mario-transparent-png_9822730_17
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 137
+        width: 83
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39dd9d38d33b33f0680a966f6de5cfa7
+      internalID: -1507531486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mario-transparent-png_9822730_18
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 141
+        width: 78
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f51248739c6dcb5a8ad386e1ddadaf68
+      internalID: 815030511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mario-transparent-png_9822730_19
+      rect:
+        serializedVersion: 2
+        x: 516
+        y: 141
+        width: 78
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48d92609fdb1b23dfadf5fc8e92f98cd
+      internalID: 572453854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      NicePng_mario-transparent-png_9822730_10: 589941343
+      NicePng_mario-transparent-png_9822730_4: -1655914009
+      NicePng_mario-transparent-png_9822730_25: 695573850
+      NicePng_mario-transparent-png_9822730_28: 877851579
+      NicePng_mario-transparent-png_9822730_31: -1765343083
+      NicePng_mario-transparent-png_9822730_21: 696367854
+      NicePng_mario-transparent-png_9822730_23: 156389129
+      NicePng_mario-transparent-png_9822730_11: 965001669
+      NicePng_mario-transparent-png_9822730_22: 1541802221
+      NicePng_mario-transparent-png_9822730_7: -1621974079
+      NicePng_mario-transparent-png_9822730_14: -1883322893
+      NicePng_mario-transparent-png_9822730_19: 572453854
+      NicePng_mario-transparent-png_9822730_9: 1743240705
+      NicePng_mario-transparent-png_9822730_29: -104347473
+      NicePng_mario-transparent-png_9822730_24: 1148185165
+      NicePng_mario-transparent-png_9822730_30: -437013884
+      NicePng_mario-transparent-png_9822730_16: -424944211
+      NicePng_mario-transparent-png_9822730_8: 342953987
+      NicePng_mario-transparent-png_9822730_17: -1507531486
+      NicePng_mario-transparent-png_9822730_26: 1274570563
+      NicePng_mario-transparent-png_9822730_2: -540660915
+      NicePng_mario-transparent-png_9822730_13: 1234937154
+      NicePng_mario-transparent-png_9822730_15: -1392090808
+      NicePng_mario-transparent-png_9822730_6: -165143960
+      NicePng_mario-transparent-png_9822730_5: 474099880
+      NicePng_mario-transparent-png_9822730_0: -1913666126
+      NicePng_mario-transparent-png_9822730_27: 467583487
+      NicePng_mario-transparent-png_9822730_12: 1575251448
+      NicePng_mario-transparent-png_9822730_3: 1078220019
+      NicePng_mario-transparent-png_9822730_1: -407618744
+      NicePng_mario-transparent-png_9822730_18: 815030511
+      NicePng_mario-transparent-png_9822730_20: 2145961492
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
