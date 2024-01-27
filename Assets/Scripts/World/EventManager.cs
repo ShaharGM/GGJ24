@@ -20,15 +20,6 @@ public class EventManager : MonoBehaviour
     void Awake()
     {
         ListenToGameEvents();
-        if (Instance == null)
-        {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
     }
 
     void Update()
@@ -55,6 +46,10 @@ public class EventManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.V))
         {
             StartCutsceneEvent.Invoke();
+        }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            OnDeath.Invoke();
         }
     }
 

@@ -6,6 +6,11 @@ public class YouLose : MonoBehaviour
 {
     public GameObject loseCanvas;
 
+    public void onAwake()
+    {
+        DontDestroyOnLoad(this.gameObject);
+    }
+
     public void ShowLoseCanvas()
     {
         loseCanvas.SetActive(true);
