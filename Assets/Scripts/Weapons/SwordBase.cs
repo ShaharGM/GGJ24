@@ -38,7 +38,7 @@ namespace Weapons
             {
                 // Call the OnHit function of the enemy
                 Debug.Log("Enemy Hit!");
-                hit.collider.gameObject.GetComponent<EnemyBase>().OnHit();
+                hit.collider.gameObject.GetComponent<EnemyBase>().OnHit(10, this.gameObject);
             }
             PerformBasicSlash();
         }

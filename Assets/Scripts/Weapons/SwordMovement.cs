@@ -48,18 +48,7 @@ public class SwordMovement : MonoBehaviour
     private void Attack()
     {
         // Check if the sword has a parent and use its transform, otherwise use the sword's own transform
-        Transform attackOrigin = transform.parent ? transform.parent : transform;
-
-        Debug.Log($"Sword attacking with power {power}, length {attackRange}, and width {circleCastRadius}.");
-        Vector2 direction = attackOrigin.right; // Assuming the parent's right is the forward direction
-        RaycastHit2D hit = Physics2D.CircleCast(attackOrigin.position, circleCastRadius, direction, attackRange, enemyLayer);
-
-        if (hit.collider != null && hit.collider.gameObject.CompareTag("Enemy"))
-        {
-            // Call the OnHit function of the enemy
-
-            hit.collider.gameObject.GetComponent<EnemyBase>().OnHit();
-        }
+        Debug.Log($"Sword attacking with power {power}");
         PerformBasicSlash();
     }
 
@@ -101,6 +90,13 @@ public class SwordMovement : MonoBehaviour
         {
             is_attacking = false;
             
+        }
+
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            // Call the OnHit function of the enemy
+            Debug.Log("Enemy Hit!");
+            collision.gameObject.GetComponent<EnemyBase>().OnHit(power, this.gameObject);
         }
     }
 

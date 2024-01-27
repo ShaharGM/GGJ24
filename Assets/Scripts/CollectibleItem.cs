@@ -7,7 +7,7 @@ public class CollectibleItem : MonoBehaviour
     public float rotationSpeed = 50f;
     public float floatAmplitude = 0.5f;
     public float floatFrequency = 1f;
-    public float SwordSizeIncrease = 0.03f;
+    public float SwordSizeIncrease = 0.2f;
 
     public AudioSource audioSource;
     public ParticleSystem particleSystem;
@@ -63,6 +63,7 @@ public class CollectibleItem : MonoBehaviour
                 newScale.y += SwordSizeIncrease;
                 rb.mass += SwordSizeIncrease;
                 sword.transform.localScale = newScale;
+                sword.GetComponent<SwordMovement>().power += SwordSizeIncrease * 10;
             }
             else
             {
