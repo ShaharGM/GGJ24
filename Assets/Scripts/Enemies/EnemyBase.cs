@@ -22,6 +22,8 @@ public class EnemyBase : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         spriteRenderer.color = originalColor;
         audio = GetComponent<AudioSource>();
+        startPosition = transform.position;
+        tempPosition = startPosition;
     }
 
     void Update()

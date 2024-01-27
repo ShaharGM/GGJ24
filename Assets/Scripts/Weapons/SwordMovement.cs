@@ -86,18 +86,22 @@ public class SwordMovement : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         // Check if the collision is with an object that should stop the animation (you might want to refine this condition)
-        if (collision.gameObject.layer == 6)
+        if (collision.gameObject.CompareTag("Enemy") && is_attacking)
+        {
+            // Call the OnHit function of the enemy
+            Debug.Log("Enemy Hit!");
+            collision.gameObject.GetComponent<EnemyBase>().OnHit(power, this.gameObject);
+            is_attacking = false;
+        }
+        else if (collision.gameObject.layer == 6)
         {
             is_attacking = false;
             
         }
 
-        if (collision.gameObject.CompareTag("Enemy"))
-        {
-            // Call the OnHit function of the enemy
-            Debug.Log("Enemy Hit!");
-            collision.gameObject.GetComponent<EnemyBase>().OnHit(power, this.gameObject);
-        }
+        
+
+
     }
 
     void OnDrawGizmos()
