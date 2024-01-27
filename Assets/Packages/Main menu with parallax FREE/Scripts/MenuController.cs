@@ -21,6 +21,9 @@ public class MenuController : MonoBehaviour {
     //Check if using parallax or not
     public bool useParallax = true;
 
+     [SerializeField]
+    public string mainScene = "LightShield";
+
     //Scenes animation
     private bool isAnimating = false;
     private int activeScene = 1;
@@ -67,7 +70,7 @@ public class MenuController : MonoBehaviour {
     private AudioSource Audio;
 
     //Events
-    [SerializeField, HideInInspector]
+    [SerializeField]
     public UnityEvent[] Events;
 
     //Exit Menu
@@ -194,7 +197,8 @@ public class MenuController : MonoBehaviour {
     //Press enter or click on option 
     public void pressEnter()
     {
-        Events[option].Invoke();
+        int id = option > 0 ? option + 2 : option; //commented out options. where are the events saved? >.>
+        Events[id].Invoke();
     }
 
     //Function to go foward in the menu
@@ -225,133 +229,13 @@ public class MenuController : MonoBehaviour {
     public void newGame()
     {
         //Loads the first scene, change the number to your desired scene
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(mainScene);
     }
 
     //Continue
     public void continueGame()
     {
         //In this part you need to include your save game script to implement the continue function
-    }
-
-    //Select scene Event
-    public void selectScene()
-    {
-        Destroy(activeBackground[0]);
-        //Instantiate all the backgrounds for the scenes
-        //If using the parallax option the parallax backgrounds are spawned
-        if (useParallax)
-        {
-            for (int i = backgroundsParallax.Length-1; i > -1; i--)
-            {
-                var bck = Instantiate(backgroundsParallax[i]) as GameObject;
-                var rect = bck.GetComponent<RectTransform>();
-                bck.transform.SetParent(backgroundsController.transform);
-                bck.transform.localScale = Vector3.one;
-                bck.transform.localPosition = Vector3.zero;
-                bck.transform.SetSiblingIndex(0);
-                var thisRect = gameObject.GetComponent<RectTransform>();
-                rect.offsetMax = new Vector2((thisRect.rect.width * i), 0);
-                rect.offsetMin = new Vector2(thisRect.rect.width * i, 0);
-                activeBackground[i] = bck;
-                menuBar.SetActive(false);
-                mainMenu = false;
-            }
-
-        //If not, we spawn the normal backgrounds
-        }else
-        {
-            for (int i = backgrounds.Length - 1; i > -1; i--)
-            {
-                var bck = Instantiate(backgrounds[i]) as GameObject;
-                var rect = bck.GetComponent<RectTransform>();
-                bck.transform.SetParent(backgroundsController.transform);
-                bck.transform.localScale = Vector3.one;
-                bck.transform.localPosition = Vector3.zero;
-                bck.transform.SetSiblingIndex(0);
-                var thisRect = gameObject.GetComponent<RectTransform>();
-                rect.offsetMax = new Vector2((thisRect.rect.width * i), 0);
-                rect.offsetMin = new Vector2(thisRect.rect.width * i , 0);
-                activeBackground[i] = bck;
-                menuBar.SetActive(false);
-                mainMenu = false;
-            }
-        }
-    }
-
-    //Advances throught the Scenes
-    public void advanceScene()
-    {
-        //First check if we are animating and if we are not in the last scene
-        if (!isAnimating && activeScene < activeBackground.Length)
-        {
-            Audio.clip = SceneSelect;
-            Audio.Play();
-            //Then create a new clip and a curve to animate the scenes moving
-            var clip = new AnimationClip();
-            var curve = new AnimationCurve();
-            //Get the anim from the backgroundController to put the clip
-            var anim = backgroundsController.GetComponent<Animation>();
-            //If the clip already exist we remove it
-            if (anim.GetClip("f") != null) { anim.RemoveClip("f"); }
-            clip.legacy = true;
-            //Now we check the distance between 2 scenes to move then
-            float distance = Vector3.Distance(activeBackground[0].transform.localPosition, activeBackground[1].transform.localPosition);
-            //Set the curve with the data
-            curve = AnimationCurve.Linear(0, (backgroundsController.transform.localPosition.x), animSpeed, (distance * -1)*activeScene);
-            Debug.Log(distance * activeScene);
-            clip.SetCurve("", typeof(Transform), "localPosition.x", curve);
-            //And play the animation
-            anim.AddClip(clip, "f");
-            anim.Play("f");
-            //We also keep the count of the active scene in this variable
-            activeScene++;
-            //Now we put the active scene in the first sibling index to activate the parallax effect
-            activeBackground[activeScene - 1].transform.SetAsFirstSibling();
-
-        }
-    }
-
-    //Advances throught the Scenes
-    public void goBackScene()
-    {
-
-        //First check if we are animating and if we are not in the first scene
-        if (!isAnimating && activeScene > 1)
-        {
-            activeScene--;
-            //Then create a new clip and a curve to animate the scenes moving
-            var clip = new AnimationClip();
-            var curve = new AnimationCurve();
-            //Get the anim from the backgroundController to put the clip
-            var anim = backgroundsController.GetComponent<Animation>();
-            //If the clip already exist we remove it
-            if (anim.GetClip("b") != null) { anim.RemoveClip("b"); }
-            clip.legacy = true;
-            //Now we check the distance between 2 scenes to move then
-            float distance = Vector3.Distance(activeBackground[0].transform.localPosition, activeBackground[1].transform.localPosition);
-            //Set the curve with the data
-            curve = AnimationCurve.Linear(0, (backgroundsController.transform.localPosition.x), animSpeed, distance*(activeScene-1)*-1);
-            Debug.Log(distance*(activeScene - 1));
-            clip.SetCurve("", typeof(Transform), "localPosition.x", curve);
-            //And play the animation
-            anim.AddClip(clip, "b");
-            anim.Play("b");
-            //We also keep the count of the active scene in this variable
-            //Now we put the active scene in the first sibling index to activate the parallax effect
-            activeBackground[activeScene ].transform.SetAsLastSibling();
-        }
-    }
-
-    //Closes the scenes menu
-    public void closeScenes()
-    {
-        //Destroy all the active backgrounds and restart the menu
-        for (int i = 0; i < activeBackground.Length; i++)
-        {
-            Destroy(activeBackground[i]);
-        }
-        initiate();
     }
 
     //Opens the exit menu
