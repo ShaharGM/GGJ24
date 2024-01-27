@@ -21,8 +21,8 @@ public class MenuController : MonoBehaviour {
     //Check if using parallax or not
     public bool useParallax = true;
 
-     [SerializeField]
-    public string mainScene = "LightShield";
+    //  [SerializeField]
+    // public string mainScene = "DawnDude";
 
     //Scenes animation
     private bool isAnimating = false;
@@ -229,7 +229,7 @@ public class MenuController : MonoBehaviour {
     public void newGame()
     {
         //Loads the first scene, change the number to your desired scene
-        SceneManager.LoadScene(mainScene);
+        SceneManager.LoadScene(1);
     }
 
     //Continue
