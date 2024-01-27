@@ -55,11 +55,13 @@ public class CollectibleItem : MonoBehaviour
 
             // Find the GameObject with the "Sword" tag
             GameObject sword = GameObject.FindGameObjectWithTag("Sword");
+            Rigidbody2D rb = sword.GetComponent<Rigidbody2D>();
             if (sword != null)
             {
                 // Increase the Y scale of the sword by scaleYIncrease
                 Vector3 newScale = sword.transform.localScale;
                 newScale.y += SwordSizeIncrease;
+                rb.mass += SwordSizeIncrease;
                 sword.transform.localScale = newScale;
             }
             else
