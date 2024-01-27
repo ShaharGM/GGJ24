@@ -5116,7 +5116,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationSpeed: 50
-  floatAmplitude: 0.5
+  floatAmplitude: 0.1
   floatFrequency: 1
   SwordSizeIncrease: 0.03
   audioSource: {fileID: 4537327250602927120}
