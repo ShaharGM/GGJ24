@@ -8,6 +8,8 @@ TagManager:
   - Sword
   - Princess
   - VideoPlayer
+  - LoseCanvas
+  - LoseCanvasText
   layers:
   - Default
   - TransparentFX
@@ -17,7 +19,7 @@ TagManager:
   - UI
   - Platforms
   - Enemies
-  - 
+  - InstaDeath
   - 
   - 
   - 
