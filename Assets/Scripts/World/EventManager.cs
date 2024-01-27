@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.Events;
+using TMPro;
 
 public class EventManager : MonoBehaviour
 {
@@ -9,8 +10,10 @@ public class EventManager : MonoBehaviour
     public static UnityEvent onTalk = new UnityEvent();
     public static UnityEvent StartCutsceneEvent = new UnityEvent();
     public static UnityEvent OnDeath = new UnityEvent();
+    public static UnityEvent SwordTooBigEvent = new UnityEvent();
 
     [SerializeField] private GameObject loseCanvas; // Serialized loseCanvas reference
+    [SerializeField] private TextMeshProUGUI loseTextToChange; // Serialized loseCanvas reference
 
     private bool isGamePaused = false;
 
@@ -36,6 +39,7 @@ public class EventManager : MonoBehaviour
     public void ListenToGameEvents()
     {
         OnDeath.AddListener(ShowLoseCanvas);
+        SwordTooBigEvent.AddListener(PreapreTooBigSword);
     }
 
     public void KeyboardDebugEvent()
@@ -70,12 +74,15 @@ public class EventManager : MonoBehaviour
     public void ShowLoseCanvas()
     {
         Debug.Log("Death detected!");
-        if (!isGamePaused)
-        {
-            PauseGame(true);
-        }
-
+        PauseGame(true);
         // Call the ShowLoseCanvas function of the loseCanvas script (replace 'loseCanvas' with your actual reference)
         loseCanvas.GetComponent<YouLose>().ShowLoseCanvas();
+    }
+
+    public void PreapreTooBigSword()
+    {
+         Debug.Log("Sword too bit Detected!");
+         loseTextToChange.text = "Game Over!\nThat Bridge couldn't handle your mighty sword!\nPerhaps a different approach is needed...";
+         ShowLoseCanvas();
     }
 }

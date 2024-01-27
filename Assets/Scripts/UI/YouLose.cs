@@ -13,6 +13,7 @@ public class YouLose : MonoBehaviour
 
     public static void ReloadScene()
     {
+        Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 

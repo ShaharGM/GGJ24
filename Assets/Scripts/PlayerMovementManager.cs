@@ -1,11 +1,12 @@
-
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PlayerMovementManager : MonoBehaviour
 {
     public float moveSpeed = 5f;  // Adjust this speed to your liking
     public float jumpForce = 10f;  // Adjust the jump force
     public LayerMask groundLayer;  // Assign the ground layer in the Inspector
+    
 
     private Rigidbody2D rb;
     private bool isGrounded;
@@ -96,5 +97,14 @@ public class PlayerMovementManager : MonoBehaviour
         // Visualize the ground check ray
         Gizmos.color = isGrounded ? Color.green : Color.red;
         Gizmos.DrawLine(GetRaycastOrigin(), GetRaycastOrigin() + Vector2.down * 0.2f);
+    }
+    
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        // Check if the collision's GameObject is on the InstaDeath layer
+        if (other.gameObject.layer == LayerMask.NameToLayer("InstaDeath"))
+        {
+            EventManager.SwordTooBigEvent.Invoke(); // Raise the 'death' event
+        }
     }
 }
