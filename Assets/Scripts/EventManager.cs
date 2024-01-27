@@ -7,7 +7,8 @@ public class EventManager : MonoBehaviour
 
     public static UnityEvent onPlayerHit = new UnityEvent();
     public static UnityEvent onTalk = new UnityEvent();
-
+    public static UnityEvent StartCutsceneEvent = new UnityEvent();
+    
     void Awake()
     {
         // Ensure there's only one instance of the EventManager
@@ -36,6 +37,10 @@ public class EventManager : MonoBehaviour
                 if (Input.GetKeyDown(KeyCode.T))
         {
             onTalk.Invoke(); // Trigger the event
+        }
+        if (Input.GetKeyDown(KeyCode.V))
+        {
+            StartCutsceneEvent.Invoke();
         }
     }
 }
